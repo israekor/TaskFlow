@@ -141,11 +141,7 @@ Simplifier les tests et les modifications futures.
 
 - **Captures d’écran principales de l’application :**
 
-**![l**oading-ag-147](C:/Users/LENOVO/Pictures/Typedown/2752772b-3e95-4af7-bd09-b40d8d31c540.png)   ![0dcb292f-9c27-40a0-99a6-dc70121ba370](file:///C:/Users/LENOVO/Pictures/Typedown/0dcb292f-9c27-40a0-99a6-dc70121ba370.png)  
-
-
-
-![3e9b0d9d-8ace-4065-bdac-ca4815fe48fd](file:///C:/Users/LENOVO/Pictures/Typedown/3e9b0d9d-8ace-4065-bdac-ca4815fe48fd.png)   ![2dcc6ce3-d330-4fff-9279-2c80e2a719e8](file:///C:/Users/LENOVO/Pictures/Typedown/2dcc6ce3-d330-4fff-9279-2c80e2a719e8.png)  
+Dans le dossier captures_d_ecran
 
 
 
