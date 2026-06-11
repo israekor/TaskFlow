@@ -6,6 +6,7 @@ import '../../models/user.dart';
 import '../auth/login_page.dart';
 import 'add_task_page.dart';
 import 'edit_task_page.dart';
+import 'statistics_page.dart';
 
 class HomePage extends StatefulWidget {
   final User user;
@@ -71,6 +72,19 @@ class _HomePageState extends State<HomePage> {
         title: Text("Bonjour ${widget.user.name}"),
 
         actions: [
+          IconButton(
+            icon: const Icon(Icons.bar_chart),
+
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => StatisticsPage(userId: widget.user.id!),
+                ),
+              );
+            },
+          ),
+
           IconButton(onPressed: logout, icon: const Icon(Icons.logout)),
         ],
       ),

@@ -55,4 +55,48 @@ class TaskController {
       whereArgs: [id],
     );
   }
+
+  // Nombre total des tâches d'un utilisateur
+  Future<int> getTotalTasks(int userId) async {
+    final db = await DatabaseHelper.instance.database;
+
+    final result = await db.rawQuery(
+      "SELECT COUNT(*) as total FROM tasks WHERE user_id = ?",
+      [userId],
+    );
+
+    return result.first["total"] as int;
+  }
+
+  // Nombre des tâches terminées
+  Future<int> getCompletedTasks(int userId) async {
+    final db = await DatabaseHelper.instance.database;
+
+    final result = await db.rawQuery(
+      """
+    SELECT COUNT(*) as total 
+    FROM tasks 
+    WHERE user_id = ? AND status = 1
+    """,
+      [userId],
+    );
+
+    return result.first["total"] as int;
+  }
+
+  // Nombre des tâches non terminées
+  Future<int> getPendingTasks(int userId) async {
+    final db = await DatabaseHelper.instance.database;
+
+    final result = await db.rawQuery(
+      """
+    SELECT COUNT(*) as total 
+    FROM tasks 
+    WHERE user_id = ? AND status = 0
+    """,
+      [userId],
+    );
+
+    return result.first["total"] as int;
+  }
 }
