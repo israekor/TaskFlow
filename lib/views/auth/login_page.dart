@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Email ou mot de passe incorrect")),
+          const SnackBar(content: Text("Email ou mot de passe incorrect !!")),
         );
       }
     }
@@ -83,14 +83,14 @@ class _LoginPageState extends State<LoginPage> {
                 controller: emailController,
 
                 decoration: const InputDecoration(
-                  labelText: "Email",
+                  labelText: "Email ",
                   prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(),
                 ),
 
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Entrez votre email";
+                    return "Entrez votre email ";
                   }
 
                   return null;
@@ -106,14 +106,14 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: true,
 
                 decoration: const InputDecoration(
-                  labelText: "Mot de passe",
+                  labelText: "Mot de passe ",
                   prefixIcon: Icon(Icons.lock),
                   border: OutlineInputBorder(),
                 ),
 
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Entrez votre mot de passe";
+                    return "Entrez votre mot de passe ";
                   }
 
                   return null;
