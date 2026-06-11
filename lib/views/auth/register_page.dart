@@ -13,7 +13,6 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   // Formulaire
   final _formKey = GlobalKey<FormState>();
-
   // Contrôleurs des champs
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();

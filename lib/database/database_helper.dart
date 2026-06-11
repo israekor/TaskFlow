@@ -12,12 +12,9 @@ class DatabaseHelper {
     if (_database != null) {
       return _database!;
     }
-
     _database = await _initDB('taskflow.db');
-
     return _database!;
   }
-
   Future<Database> _initDB(String filePath) async {
     final dbPath = await getDatabasesPath();
 
@@ -37,7 +34,6 @@ class DatabaseHelper {
         password TEXT NOT NULL
       )
     ''');
-
     // Table tâches
     await db.execute('''
       CREATE TABLE tasks(
@@ -53,7 +49,6 @@ class DatabaseHelper {
       )
     ''');
   }
-
   Future close() async {
     final db = await instance.database;
 
